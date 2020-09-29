@@ -11,9 +11,7 @@ namespace MyRentalShopMVC.Domain.Model
         /// <summary>
         /// Nazwa klienta indywidualnego lub firmy
         /// </summary>
-        public string Name { get; set; }
-
-      
+        public string Name { get; set; } 
         
         /// <summary>
         /// Data rejestracji użytkownika
@@ -130,24 +128,15 @@ namespace MyRentalShopMVC.Domain.Model
         /// </summary>
         public string Country { get; set; }
         
-        /// <summary>
-        /// Główny nr telefonu
-        /// </summary>
-        public string PhoneNumber { get; set; }
-
-        /// <summary>
-        /// Dodatkowy nr telefonu
-        /// </summary>
-        public string PhoneNumberSecond { get; set; }
-
-        /// <summary>
-        /// Adres poczty e-mail do kontaktu z klientem i wysyłania powiadomień
-        /// </summary>
-        public string EmailAdress { get; set; }
 
         /// <summary>
         /// Obiekt w którym przechowywana jest informacja na temat osoby do kontaktu
         /// </summary>
         public CustomerContactInformation CustomerContactInformation { get; set; }
+
+        /// <summary>
+        /// Kolekcja z której pobiram informacje o nr telofonów i adresach e-mail
+        /// </summary>
+        public virtual ICollection<ContactDetail> ContactDetails { get; set; }
     }
 }
