@@ -7,21 +7,13 @@ namespace MyRentalShopMVC.Domain.Model
     public class Customer
     {
         public int Id { get; set; }
-        
+
         /// <summary>
-        /// Imie klienta
+        /// Nazwa klienta indywidualnego lub firmy
         /// </summary>
-        public string FirstName { get; set; }
-        
-        /// <summary>
-        /// Drugie Imię klienta, nie jest wymagane
-        /// </summary>
-        public string SecondName { get; set; }
-        
-        /// <summary>
-        /// Nazwisko klienta
-        /// </summary>
-        public string LastName { get; set; }
+        public string Name { get; set; }
+
+      
         
         /// <summary>
         /// Data rejestracji użytkownika
@@ -152,5 +144,10 @@ namespace MyRentalShopMVC.Domain.Model
         /// Adres poczty e-mail do kontaktu z klientem i wysyłania powiadomień
         /// </summary>
         public string EmailAdress { get; set; }
+
+        /// <summary>
+        /// Obiekt w którym przechowywana jest informacja na temat osoby do kontaktu
+        /// </summary>
+        public CustomerContactInformation CustomerContactInformation { get; set; }
     }
 }

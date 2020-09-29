@@ -21,24 +21,25 @@ namespace MyRentalShopMVC.Domain.Model
         /// </summary>
         public string SecondName { get; set; }
         
-        /// <summary>
-        /// jakiego typu jest produkt
-        /// </summary>
-        public string TypeId { get; set; }
  
         /// <summary>
         /// Nr inwentarzowy np kod kreskowy, lub nr rejestracyjny pojazdu
         /// </summary>
         public int InventoryNumber { get; set; }
 
+        /// <summary>
+        /// jakiego typu jest produkt
+        /// </summary>
+        public string TypeId { get; set; }
 
         /// <summary>
         /// Pole do sprawdzania jakiego typu jest produkt i do 
         /// </summary>
         public virtual Type Type { get; set; }
 
-        
+        public ICollection<ItemTag> ItemTags { get; set; }
 
 
-}
+
+    }
 }
