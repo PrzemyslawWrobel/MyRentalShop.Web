@@ -31,6 +31,10 @@ namespace MyRentalShopMVC.Domain.Model
         /// </summary>
         public int InventoryNumber { get; set; }
 
+
+        /// <summary>
+        /// Pole do sprawdzania jakiego typu jest produkt i do 
+        /// </summary>
         public virtual Type Type { get; set; }
 
         

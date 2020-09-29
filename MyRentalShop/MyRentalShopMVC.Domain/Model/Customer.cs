@@ -109,11 +109,48 @@ namespace MyRentalShopMVC.Domain.Model
         public string REGON { get; set; }
 
         /// <summary>
+        /// Nazwa ulicy
+        /// </summary>
+        public string Street { get; set; }
+
+        /// <summary>
+        /// Numer Bloku, Domu
+        /// </summary>
+        public string BuildingNumber { get; set; }
+
+        /// <summary>
+        /// Numer mieszkania
+        /// </summary>
+        public int FlatNumber { get; set; }
+
+        /// <summary>
+        /// Kod pocztowy
+        /// </summary>
+        public string ZipCode { get; set; }
+
+        /// <summary>
+        /// Nazwa miasta, Wsi
+        /// </summary>
+        public string City { get; set; }
+        
+        /// <summary>
+        /// Nazwa Kraju
+        /// </summary>
+        public string Country { get; set; }
+        
+        /// <summary>
+        /// Główny nr telefonu
+        /// </summary>
+        public string PhoneNumber { get; set; }
+
+        /// <summary>
+        /// Dodatkowy nr telefonu
+        /// </summary>
+        public string PhoneNumberSecond { get; set; }
+
+        /// <summary>
         /// Adres poczty e-mail do kontaktu z klientem i wysyłania powiadomień
         /// </summary>
-        public string Email { get; set; }
-
-        public string AdressLine1 { get; set; }
-
+        public string EmailAdress { get; set; }
     }
 }
