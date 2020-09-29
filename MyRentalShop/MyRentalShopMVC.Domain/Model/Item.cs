@@ -31,8 +31,10 @@ namespace MyRentalShopMVC.Domain.Model
         /// </summary>
         public int InventoryNumber { get; set; }
 
+        public virtual Type Type { get; set; }
+
+        
 
 
-
-    }
+}
 }

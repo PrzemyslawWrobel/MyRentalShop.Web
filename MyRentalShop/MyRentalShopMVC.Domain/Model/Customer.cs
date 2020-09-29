@@ -113,7 +113,7 @@ namespace MyRentalShopMVC.Domain.Model
         /// </summary>
         public string Email { get; set; }
 
-
+        public string AdressLine1 { get; set; }
 
     }
 }
