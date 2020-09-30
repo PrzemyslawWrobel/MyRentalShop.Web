@@ -98,36 +98,6 @@ namespace MyRentalShopMVC.Domain.Model
         /// </summary>
         public string REGON { get; set; }
 
-        /// <summary>
-        /// Nazwa ulicy
-        /// </summary>
-        public string Street { get; set; }
-
-        /// <summary>
-        /// Numer Bloku, Domu
-        /// </summary>
-        public string BuildingNumber { get; set; }
-
-        /// <summary>
-        /// Numer mieszkania
-        /// </summary>
-        public int FlatNumber { get; set; }
-
-        /// <summary>
-        /// Kod pocztowy
-        /// </summary>
-        public string ZipCode { get; set; }
-
-        /// <summary>
-        /// Nazwa miasta, Wsi
-        /// </summary>
-        public string City { get; set; }
-        
-        /// <summary>
-        /// Nazwa Kraju
-        /// </summary>
-        public string Country { get; set; }
-        
 
         /// <summary>
         /// Obiekt w którym przechowywana jest informacja na temat osoby do kontaktu
@@ -138,5 +108,9 @@ namespace MyRentalShopMVC.Domain.Model
         /// Kolekcja z której pobiram informacje o nr telofonów i adresach e-mail
         /// </summary>
         public virtual ICollection<ContactDetail> ContactDetails { get; set; }
+        /// <summary>
+        /// kolekcja adresów, informuje o miejscu zamieszkania lub prowadzenia działalności gospodarczej
+        /// </summary>
+        public virtual ICollection<Adress> Adresses { get; set; }
     }
 }

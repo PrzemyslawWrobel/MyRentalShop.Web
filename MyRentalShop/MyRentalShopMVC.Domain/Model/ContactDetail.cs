@@ -16,6 +16,6 @@ namespace MyRentalShopMVC.Domain.Model
         /// Klucz obcy wskazujący na tabelę Customer - kolumnę z ID
         /// </summary>
         public int CustomerId { get; set; }
-        public Customer Customer { get; set; }
+        public virtual Customer Customer { get; set; }
     }
 }
