@@ -28,6 +28,8 @@ namespace MyRentalShopMVC.Domain.Model
         /// </summary>
         public string Position { get; set; }
 
+
+
         /// <summary>
         /// Referencja do użytkownika
         /// </summary>

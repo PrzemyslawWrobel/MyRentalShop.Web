@@ -100,7 +100,7 @@ namespace MyRentalShopMVC.Domain.Model
 
 
         /// <summary>
-        /// Obiekt w którym przechowywana jest informacja na temat osoby do kontaktu
+        /// Obiekt w którym przechowywana jest informacja na temat osoby do kontaktu, tworzymy relację do tabeli w przechowującej osobę reprezentującą firmę
         /// </summary>
         public CustomerContactInformation CustomerContactInformation { get; set; }
 
@@ -111,6 +111,8 @@ namespace MyRentalShopMVC.Domain.Model
         /// <summary>
         /// kolekcja adresów, informuje o miejscu zamieszkania lub prowadzenia działalności gospodarczej
         /// </summary>
-        public virtual ICollection<Adress> Adresses { get; set; }
+        public virtual ICollection<Address> Adresses { get; set; }
+
+
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MyRentalShopMVC.Domain.Model
 {
-    public  class Adress
+    public  class Address
     {
         public int Id { get; set; }
 

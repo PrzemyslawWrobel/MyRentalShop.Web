@@ -37,6 +37,11 @@ namespace MyRentalShopMVC.Domain.Model
         /// </summary>
         public virtual Type Type { get; set; }
 
+
+        /// <summary>
+        /// relacja wiele do wielu parami kluczy które są w klasie ItemTag
+        /// kolekcja tagów
+        /// </summary>
         public ICollection<ItemTag> ItemTags { get; set; }
 
 
