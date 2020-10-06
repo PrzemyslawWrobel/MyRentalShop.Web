@@ -29,6 +29,16 @@ namespace MyRentalShopMVC.Domain.Model
         public int CustomerStatusId { get; set; }
 
         /// <summary>
+        /// NIP firmy wypożyczającej
+        /// </summary>
+        public string NIP { get; set; }
+
+        /// <summary>
+        /// Regon firmy wypożyczającej
+        /// </summary>
+        public string REGON { get; set; }
+
+        /// <summary>
         /// Obiekt w którym przechowywana jest informacja na temat osoby do kontaktu, tworzymy relację do tabeli w przechowującej osobę reprezentującą firmę
         /// </summary>
         public CustomerContactInformation CustomerContactInformation { get; set; }
@@ -48,6 +58,10 @@ namespace MyRentalShopMVC.Domain.Model
         /// </summary>
         public virtual ICollection<Document> Documents { get; set; }
 
+        /// <summary>
+        /// Karty kredytowe przypisane do użytkownika
+        /// </summary>
+        public virtual ICollection<CreditCard> CreditCards { get; set; }
 
     }
 }
