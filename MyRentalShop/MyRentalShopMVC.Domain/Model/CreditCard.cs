@@ -4,14 +4,13 @@ using System.Text;
 
 namespace MyRentalShopMVC.Domain.Model
 {
-  
-    public class ContactDetailType
+    public class CreditCard
     {
         public int Id { get; set; }
 
         /// <summary>
-        /// Przechowuje informacje czy to jest nr tel czy nr faksu czy adres email
+        /// Przechowuje nazwę karty
         /// </summary>
-        public string Name { get; set; }
+        public string DocumentDetailInformation { get; set; }
     }
 }

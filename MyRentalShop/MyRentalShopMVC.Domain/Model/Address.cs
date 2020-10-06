@@ -9,6 +9,11 @@ namespace MyRentalShopMVC.Domain.Model
         public int Id { get; set; }
 
         /// <summary>
+        /// Jaki adres domowy, do korespondencji, zamieszkanaia, wykonywania działalności
+        /// </summary>
+        public string AddressType { get; set; }
+
+        /// <summary>
         /// Nazwa ulicy
         /// </summary>
         public string Street { get; set; }

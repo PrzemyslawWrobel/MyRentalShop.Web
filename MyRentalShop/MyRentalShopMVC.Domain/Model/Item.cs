@@ -33,9 +33,16 @@ namespace MyRentalShopMVC.Domain.Model
         public string TypeId { get; set; }
 
         /// <summary>
+        /// Minimalny wiek wypożyczającego, sprzęt narzędzia
+        /// </summary>
+        public int MinAgeBorrower { get; set; }
+
+
+        /// <summary>
         /// Pole do sprawdzania jakiego typu jest produkt i do 
         /// </summary>
         public virtual Type Type { get; set; }
+
 
 
         /// <summary>
