@@ -45,7 +45,7 @@ namespace MyRentalShopMVC.Infrastructure
             builder.Entity<ItemTag>()
                 .HasOne<Item>(it => it.Item)
                 .WithMany(i => i.ItemTags)
-                .HasForeignKey(it => it.Item);
+                .HasForeignKey(it => it.ItemId);
 
             builder.Entity<ItemTag>()
                 .HasOne<Tag>(it => it.Tag)
