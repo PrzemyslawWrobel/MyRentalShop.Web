@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage;
+using MyRentalShopMVC.Domain.Interfaces;
 using MyRentalShopMVC.Domain.Model;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using Type = MyRentalShopMVC.Domain.Model.Type;
 
 namespace MyRentalShopMVC.Infrastructure.Repositories
 {
-    public class ItemRepository
+    public class ItemRepository : IItemRepository
     {
         private readonly Context _context;
         public ItemRepository(Context context)
@@ -45,7 +46,11 @@ namespace MyRentalShopMVC.Infrastructure.Repositories
             return item;
         }
 
-        ///TODO metoda update 
+        ///TODO metoda update do implementacji
+        public Item UpdateItem(int itemId)
+        {
+            throw new NotImplementedException();
+        }
 
         public IQueryable<Tag> GetAllTags()
         {
@@ -58,5 +63,6 @@ namespace MyRentalShopMVC.Infrastructure.Repositories
             var types = _context.Types;
             return types;
         }
+
     }
 }
