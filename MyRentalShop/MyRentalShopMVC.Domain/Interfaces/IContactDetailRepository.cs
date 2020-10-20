@@ -16,7 +16,7 @@ namespace MyRentalShopMVC.Domain.Interfaces
 
         IQueryable<ContactDetail> GetAllContactDetailsTypeID(int contactDetailTypeId);
 
-        ContactDetail GetContactDetailById(int itcontactDetailIdemId);
+        ContactDetail GetContactDetailById(int contactDetailId);
 
         ContactDetail UpdateContactDetail(int contactDetailId);
 

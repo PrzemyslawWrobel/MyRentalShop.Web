@@ -14,6 +14,7 @@ namespace MyRentalShopMVC.Infrastructure.Repositories
         {
             _context = context;
         }
+
         public int AddItem(ContactDetail contactDetail)
         {
             _context.Add(contactDetail);
