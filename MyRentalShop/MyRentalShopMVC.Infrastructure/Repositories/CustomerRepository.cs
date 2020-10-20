@@ -45,7 +45,7 @@ namespace MyRentalShopMVC.Infrastructure.Repositories
         /// Zwraca listę wszystkich klientów
         /// </summary>
         /// <returns></returns>
-        public IQueryable<Customer> GetAllActiveCustomers()
+        public IQueryable<Customer> GetAllCustomers()
         {
             var activeCustomers = _context.Customers;
             return activeCustomers;
@@ -62,12 +62,48 @@ namespace MyRentalShopMVC.Infrastructure.Repositories
             return activeCustomers;
         }
 
+        /// <summary>
+        /// Zwraca szczegóły wybranego użytkownika
+        /// </summary>
+        /// <param name="customerId"></param>
+        /// <returns></returns>
         public Customer GetCustomerById(int customerId)
+        {
+            var customer = _context.Customers.Find(customerId);
+            return customer;
+        }
+
+        //TODO Metoda UpdateCustomer do implementacji
+        public Customer UpdateCustomer(int customerId)
         {
             throw new NotImplementedException();
         }
 
-        public Customer UpdateCustomer(int customerId)
+        /// <summary>
+        /// Dodaje dane osoby reprezentującej klienta
+        /// </summary>
+        /// <param name="customerContactInformation"></param>
+        /// <returns></returns>
+        public int AddCustomerContactInf(CustomerContactInformation customerContactInformation)
+        {
+            _context.Add(customerContactInformation);
+            _context.SaveChanges();
+            return customerContactInformation.Id;
+        }
+
+        public void DeleteCustomerContactInf(int customerContactInformationId)
+        {
+            var contactInfForDelete = _context.Customers.Find(customerContactInformationId);
+            if (contactInfForDelete != null)
+            {
+                _context.Customers.Remove(contactInfForDelete);
+                _context.SaveChanges();
+            }
+        }
+
+
+        //TODO Metoda UpdataCustomerContactInf do implementacji
+        public CustomerContactInformation UpdataCustomerContactInf(int customerContactInformationId)
         {
             throw new NotImplementedException();
         }
