@@ -39,6 +39,11 @@ namespace MyRentalShopMVC.Domain.Model
         public string REGON { get; set; }
 
         /// <summary>
+        /// Czy klient jest aktywny
+        /// </summary>
+        public bool IsActiv { get; set; }
+
+        /// <summary>
         /// Obiekt w którym przechowywana jest informacja na temat osoby do kontaktu, tworzymy relację do tabeli w przechowującej osobę reprezentującą firmę
         /// </summary>
         public CustomerContactInformation CustomerContactInformation { get; set; }

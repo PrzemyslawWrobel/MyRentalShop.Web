@@ -11,12 +11,9 @@ namespace MyRentalShopMVC.Domain.Interfaces
         int AddCustomer(Customer customer);
         Customer GetCustomerById(int customerId);
         IQueryable<Customer> GetAllActiveCustomers();
+        IQueryable<Customer> GetAllActiveCustomers(bool isActiv);
         void DeleteCustomer(int customerId);
         Customer UpdateCustomer(int customerId);
-
-        
-
-
 
     }
 }
