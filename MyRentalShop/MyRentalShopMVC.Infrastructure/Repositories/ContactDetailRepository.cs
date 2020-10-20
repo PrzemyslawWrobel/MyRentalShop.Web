@@ -33,8 +33,20 @@ namespace MyRentalShopMVC.Infrastructure.Repositories
 
         public IQueryable<ContactDetail> GetAllContactDetails()
         {
-            var contactDetails = _context.ContactDetails;
+            var contactDetailsList = _context.ContactDetails;
+            return contactDetailsList;
+        }
+
+        public IQueryable<ContactDetail> GetAllContactDetailsTypeID(int contactDetailTypeId)
+        {
+            var contactDetails = _context.ContactDetails.Where(i => i.Id == contactDetailTypeId);
             return contactDetails;
+        }
+
+        public IQueryable<ContactDetailType> GetAllContactDetailTypes()
+        {
+            var contactDetailTypes = _context.ContactDetailTypes;
+            return contactDetailTypes;
         }
 
         public ContactDetail GetContactDetailById(int contactDetailId)
@@ -42,7 +54,7 @@ namespace MyRentalShopMVC.Infrastructure.Repositories
             var contactDetail = _context.ContactDetails.FirstOrDefault(i => i.Id == contactDetailId);
             return contactDetail;
         }
-
+        //TODO Metoda  UpdateContactDetail do implementacji
         public ContactDetail UpdateContactDetail(int itemId)
         {
             throw new NotImplementedException();
