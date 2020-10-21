@@ -11,7 +11,7 @@ namespace MyRentalShopMVC.Domain.Model
         /// <summary>
         /// Przechowuje nazwę dokumentu
         /// </summary>
-        public string DocumentDetailInformation { get; set; }
+        public  DocumentDetailType DocumentDetailType { get; set; }
 
         /// <summary>
         /// Narodowość

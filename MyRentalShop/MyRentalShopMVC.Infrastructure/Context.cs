@@ -17,6 +17,7 @@ namespace MyRentalShopMVC.Infrastructure
         public DbSet<Customer> Customers { get; set; }
         public DbSet<CustomerContactInformation> CustomerContactInformation { get; set; }
         public DbSet<Document> Documents { get; set; }
+        public DbSet<DocumentDetailType> DocumentDetailTypes { get; set; }
         public DbSet<Item> Items { get; set; }
         public DbSet<ItemTag> ItemTag { get; set; } // w liczbie poj ponieważ jest to tabela pośrednia w relacji wiele do wielu
         public DbSet<Provider> Providers { get; set; }
