@@ -10,7 +10,7 @@ namespace MyRentalShopMVC.Domain.Interfaces
     {
         void DeleteContactDetail(int contactDetailId);
 
-        int AddItem(ContactDetail contactDetail);
+        int AddContactDetail(ContactDetail contactDetail);
 
         IQueryable<ContactDetail> GetAllContactDetails();
 

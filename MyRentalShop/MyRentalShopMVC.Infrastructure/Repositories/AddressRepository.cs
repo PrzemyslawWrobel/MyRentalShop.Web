@@ -16,6 +16,11 @@ namespace MyRentalShopMVC.Infrastructure.Repositories
             _context = context;
         }
 
+        /// <summary>
+        /// Dodaje adres klienta 
+        /// </summary>
+        /// <param name="address"></param>
+        /// <returns></returns>
         public int AddAddress(Address address)
         {
             _context.Add(address);
@@ -23,6 +28,10 @@ namespace MyRentalShopMVC.Infrastructure.Repositories
             return address.Id;
         }
 
+        /// <summary>
+        /// Usuwa adres klienta
+        /// </summary>
+        /// <param name="addressId"></param>
         public void DeleteAddress(int addressId)
         {
             var address = _context.Addresses.Find(addressId);
@@ -33,12 +42,21 @@ namespace MyRentalShopMVC.Infrastructure.Repositories
             }
         }
 
-        public Address GetAddressById(int addressId)
+        /// <summary>
+        /// Pobiera adres po typie(domowy, siedziba firmy)
+        /// </summary>
+        /// <param name="addressId"></param>
+        /// <returns></returns>
+        public Address GetAddressByTypeId(int addressTypeId)
         {
-            var address = _context.Addresses.FirstOrDefault(i => i.Id == addressId);
+            var address = _context.Addresses.FirstOrDefault(i => i.Id == addressTypeId);
             return address;
         }
 
+        /// <summary>
+        /// Pobiera wszystkie adresy 
+        /// </summary>
+        /// <returns></returns>
         public IQueryable<Address> GetAllAddresses()
         {
             var address = _context.Addresses;

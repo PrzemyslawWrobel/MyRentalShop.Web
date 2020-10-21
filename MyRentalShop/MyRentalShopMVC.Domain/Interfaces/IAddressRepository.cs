@@ -11,7 +11,7 @@ namespace MyRentalShopMVC.Domain.Interfaces
         void DeleteAddress(int addressId);
         int AddAddress(Address address);
         IQueryable<Address> GetAllAddresses();
-        Address GetAddressById(int addressId);
+        Address GetAddressByTypeId(int addressTypeId);
 
         Item UpdateAddress(int addressId);
     }

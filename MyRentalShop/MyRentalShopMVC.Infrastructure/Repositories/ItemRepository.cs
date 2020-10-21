@@ -17,6 +17,10 @@ namespace MyRentalShopMVC.Infrastructure.Repositories
             _context = context;
         }
 
+        /// <summary>
+        /// Dodaje rzecz do wypożyczenia
+        /// </summary>
+        /// <param name="itemId"></param>
         public void DeleteItem(int itemId)
         {
             var item = _context.Items.Find(itemId);
@@ -27,6 +31,12 @@ namespace MyRentalShopMVC.Infrastructure.Repositories
             }
         }
 
+
+        /// <summary>
+        /// usuwa rzecz z listy rzeczy do wpożyczenia
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
         public int AddItem(Item item)
         {
             _context.Add(item);
@@ -34,12 +44,22 @@ namespace MyRentalShopMVC.Infrastructure.Repositories
             return item.Id;
         }
 
+        /// <summary>
+        /// Pobranie listy rzeczy po typie
+        /// </summary>
+        /// <param name="typeId"></param>
+        /// <returns></returns>
         public IQueryable<Item> GetItemsByTypeId(int typeId)
         {
             var items = _context.Items.Where(i => i.TypeId == typeId);
             return items;
         }
 
+        /// <summary>
+        /// pobranie rzeczy po id
+        /// </summary>
+        /// <param name="itemId"></param>
+        /// <returns></returns>
         public Item GetItemById(int itemId)
         {
             var item = _context.Items.FirstOrDefault(i => i.Id == itemId);
@@ -58,6 +78,11 @@ namespace MyRentalShopMVC.Infrastructure.Repositories
             return tags;
         }
 
+
+        /// <summary>
+        /// PObranie wszystkich typów rzeczy np samochody, kosiarki ...
+        /// </summary>
+        /// <returns></returns>
         public IQueryable<Type> GetAllTypes()
         {
             var types = _context.Types;
