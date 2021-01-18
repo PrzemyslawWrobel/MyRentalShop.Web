@@ -15,13 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{50A0A698-3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{E4F5491F-E16C-40EE-AC00-99E08CCAF2DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRentalShopMVC.Application", "MyRentalShopMVC.Application\MyRentalShopMVC.Application.csproj", "{493CFA56-0B3D-402C-B1DF-B20D5AB882F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRentalShopMVC.Application", "MyRentalShopMVC.Application\MyRentalShopMVC.Application.csproj", "{493CFA56-0B3D-402C-B1DF-B20D5AB882F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRentalShopMVC.Domain", "MyRentalShopMVC.Domain\MyRentalShopMVC.Domain.csproj", "{B6EF4385-892C-4762-BEC3-96A9CEEE8933}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRentalShopMVC.Domain", "MyRentalShopMVC.Domain\MyRentalShopMVC.Domain.csproj", "{B6EF4385-892C-4762-BEC3-96A9CEEE8933}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRentalShopMVC.Infrastructure", "MyRentalShopMVC.Infrastructure\MyRentalShopMVC.Infrastructure.csproj", "{8639B18B-C57C-4DBE-90F1-E385040A5811}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRentalShopMVC.Infrastructure", "MyRentalShopMVC.Infrastructure\MyRentalShopMVC.Infrastructure.csproj", "{8639B18B-C57C-4DBE-90F1-E385040A5811}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRentalShopMVC.Tests", "MyRentalShopMVC.Tests\MyRentalShopMVC.Tests.csproj", "{D96CC3F5-4C7F-4C36-9314-AA87C2916F9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRentalShopMVC.Tests", "MyRentalShopMVC.Tests\MyRentalShopMVC.Tests.csproj", "{D96CC3F5-4C7F-4C36-9314-AA87C2916F9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
