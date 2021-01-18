@@ -5,11 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\MyRentalShopMVC.Domain\MyRentalShopMVC.Domain.csproj" />
   </ItemGroup>
 
