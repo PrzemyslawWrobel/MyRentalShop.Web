@@ -27,7 +27,7 @@ namespace MyRentalShopMVC.Application.Services
                 var customerVm = new CustomerForListVm()
                 {
                     Id = customer.Id,
-                    FullName = customer.Name,
+                    Name = customer.Name,
                     NIP = customer.NIP,
 
                 };
