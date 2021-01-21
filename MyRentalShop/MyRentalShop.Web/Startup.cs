@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MyRentalShopMVC.Infrastructure;
+using MyRentalShopMVC.Application;
 
 namespace MyRentalShop.Web
 {
@@ -32,6 +33,10 @@ namespace MyRentalShop.Web
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<Context>();
+
+            services.AddApplication();
+            services.AddInfrastructure();
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
