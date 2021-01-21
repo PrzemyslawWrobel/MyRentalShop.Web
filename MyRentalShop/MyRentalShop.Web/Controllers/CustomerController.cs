@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyRentalShopMVC.Application.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,16 @@ namespace MyRentalShop.Web.Controllers
 {
     public class CustomerController : Controller
     {
+        private readonly ICustomerService _customerService;
+
+        public CustomerController(ICustomerService customerService)
+        {
+            _customerService = customerService;
+        }
+
         public IActionResult Index()
         {
-            var model = customerService.GetAllCostomerForList();
+            var model = _customerService.GetAllCostomerForList();
             return View(model);
         }
 
@@ -20,16 +28,16 @@ namespace MyRentalShop.Web.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult AddCustomer(CustomerModel model)
-        {
-            var id = customerService.AddCustomer(model);
-            return View();
-        }
+        //[HttpPost]
+        //public IActionResult AddCustomer(CustomerModel model)
+        //{
+        //    var id = _customerService.AddCustomer(model);
+        //    return View();
+        //}
 
         public IActionResult ViewCustomer(int customerId)
         {
-            var customerModel = customerService.GetCustomerDetails(customerId);
+            var customerModel = _customerService.GetCustomerDetails(customerId);
             return View(customerModel);
         }
     }
