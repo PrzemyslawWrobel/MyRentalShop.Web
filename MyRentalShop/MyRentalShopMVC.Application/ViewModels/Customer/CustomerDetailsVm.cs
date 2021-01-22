@@ -36,7 +36,7 @@ namespace MyRentalShopMVC.Application.ViewModels.Customer
         /// <summary>
         /// Lista adresów firmy lub użytkownika
         /// </summary>
-        public List<AddressForListVm> Adresses { get; set; }
+        public List<AddressForListVm> Addresses { get; set; }
 
         /// <summary>
         /// Lista adresów email 
@@ -52,7 +52,7 @@ namespace MyRentalShopMVC.Application.ViewModels.Customer
         {
             profile.CreateMap<MyRentalShopMVC.Domain.Model.Customer, CustomerDetailsVm>()
                 .ForMember(d => d.FullName, opt => opt.MapFrom(s => s.Name))
-                .ForMember(d => d.Adresses, opt => opt.Ignore())
+                .ForMember(d => d.Addresses, opt => opt.Ignore())
                 .ForMember(d => d.Emails, opt => opt.Ignore())
                 .ForMember(d => d.PhoneNumbers, opt => opt.Ignore());
 

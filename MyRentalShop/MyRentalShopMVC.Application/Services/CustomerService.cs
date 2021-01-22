@@ -63,7 +63,24 @@ namespace MyRentalShopMVC.Application.Services
 
         public CustomerDetailsVm GetCustomerDetails(int customerId)
         {
-            throw new NotImplementedException();
+            var customer = _customerRepository.GetCustomerById(customerId);
+            var customerVm = _mapper.Map<CustomerDetailsVm>(customer);
+
+            //customerVm.Addresses = new List<AddressForListVm>();
+            //customerVm.Emails = new List<ContactDetailListVm>();
+            //customerVm.PhoneNumbers = new List<ContactDetailListVm>();
+
+            //foreach (var adresess in customer.Adresses)
+            //{
+            //    var addressesToList = new AddressForListVm()
+            //    {
+            //        Id = adresess.Id,
+
+            //    };
+            //    customerVm.Addresses.Add(addressesToList);
+            //}
+
+            return customerVm;
         }
     }
 }
