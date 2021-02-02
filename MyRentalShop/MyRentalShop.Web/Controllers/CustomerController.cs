@@ -35,9 +35,17 @@ namespace MyRentalShop.Web.Controllers
         //    return View();
         //}
 
-        public IActionResult ViewCustomer(int customerId)
+        /// <summary>
+        /// Metoda pokazuje jednego wybranego użytkownika 
+        /// </summary>
+        /// <param name="Id"> Mieniony z customerId na Id ponieważ rooting nie działał </param>
+        /// <returns></returns>
+        
+        //[Route("ViewCustomer/customerId")]
+        [HttpGet]
+        public IActionResult ViewCustomer(int Id)
         {
-            var customerModel = _customerService.GetCustomerDetails(customerId);
+            var customerModel = _customerService.GetCustomerDetails(Id);
             return View(customerModel);
         }
     }
