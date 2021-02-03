@@ -30,13 +30,20 @@ namespace MyRentalShopMVC.Application.Services
         /// Metoda do pobierania wszystkich użytkowników z bazy, otrzymujemy listę użytkowników
         /// </summary>
         /// <returns> </returns>
-        public ListCustomerForListVm GetAllCostomerForList()
+        public ListCustomerForListVm GetAllCostomerForList(int pageSize, int pageNo, string searchString)
         {
-            var customers = _customerRepository.GetAllCustomers()
+            var customers = _customerRepository.GetAllCustomers().Where(p => p.Name.StartsWith(searchString))
                 .ProjectTo<CustomerForListVm>(_mapper.ConfigurationProvider).ToList();
+
+            var customerToShow = customers.Skip(pageSize * (pageNo - 1)).Take(pageSize).ToList();
+
             var customerList = new ListCustomerForListVm()
             {
-                Customers = customers,
+
+                PegeSize = pageSize,
+                CurrentPage = pageNo,
+                SearchString = searchString,
+                Customers = customerToShow,
                 Count = customers.Count
             };
             return customerList;  

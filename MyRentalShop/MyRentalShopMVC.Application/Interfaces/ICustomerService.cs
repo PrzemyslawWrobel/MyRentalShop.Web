@@ -7,7 +7,7 @@ namespace MyRentalShopMVC.Application.Interfaces
 {
     public interface ICustomerService
     {
-        ListCustomerForListVm GetAllCostomerForList();
+        ListCustomerForListVm GetAllCostomerForList(int pageSize, int pageNo, string searchString);
         int AddCustomer(NewCustomerVm customer);
         CustomerDetailsVm GetCustomerDetails(int customerId);
     }
