@@ -26,10 +26,15 @@ namespace MyRentalShopMVC.Application.Services
         {
             throw new NotImplementedException();
         }
+
+
         /// <summary>
         /// Metoda do pobierania wszystkich użytkowników z bazy, otrzymujemy listę użytkowników
         /// </summary>
-        /// <returns> </returns>
+        /// <param name="pageSize">Ilość użytkowników na jedna stronę</param>
+        /// <param name="pageNo">Numer strony do wyświetlenia </param>
+        /// <param name="searchString">Wyszukiwana fraza</param>
+        /// <returns></returns>
         public ListCustomerForListVm GetAllCostomerForList(int pageSize, int pageNo, string searchString)
         {
             var customers = _customerRepository.GetAllCustomers().Where(p => p.Name.StartsWith(searchString))
