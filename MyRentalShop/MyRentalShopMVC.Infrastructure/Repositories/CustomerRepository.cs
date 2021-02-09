@@ -22,7 +22,7 @@ namespace MyRentalShopMVC.Infrastructure.Repositories
         /// <returns></returns>
         public int AddCustomer(Customer customer)
         {
-            _context.Add(customer);
+            _context.Customers.Add(customer);
             _context.SaveChanges();
             return customer.Id;
         }

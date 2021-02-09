@@ -56,7 +56,7 @@ namespace MyRentalShop.Web.Controllers
         public IActionResult AddCustomer(NewCustomerVm model)
         {
             var id = _customerService.AddCustomer(model);
-            return View();
+            return RedirectToAction("Index"); //View();
         }
 
         /// <summary>

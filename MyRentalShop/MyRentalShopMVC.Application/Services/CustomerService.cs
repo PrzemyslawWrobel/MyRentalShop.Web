@@ -4,6 +4,7 @@ using AutoMapper.QueryableExtensions;
 using MyRentalShopMVC.Application.Interfaces;
 using MyRentalShopMVC.Application.ViewModels.Customer;
 using MyRentalShopMVC.Domain.Interfaces;
+using MyRentalShopMVC.Domain.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,9 @@ namespace MyRentalShopMVC.Application.Services
 
         public int AddCustomer(NewCustomerVm customer)
         {
-            throw new NotImplementedException();
+            var newCustomer = _mapper.Map<Customer>(customer);
+            var id = _customerRepository.AddCustomer(newCustomer);
+            return id;
         }
 
 

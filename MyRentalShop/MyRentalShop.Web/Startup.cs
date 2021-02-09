@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MyRentalShopMVC.Infrastructure;
 using MyRentalShopMVC.Application;
+using FluentValidation.AspNetCore;
 
 namespace MyRentalShop.Web
 {
@@ -37,7 +38,7 @@ namespace MyRentalShop.Web
             services.AddApplication();
             services.AddInfrastructure();
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddFluentValidation(fv => fv.RunDefaultMvcValidationAfterFluentValidationExecutes = false);
             services.AddRazorPages();
         }
 

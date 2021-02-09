@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.Reflection;
 using AutoMapper;
+using FluentValidation;
+using MyRentalShopMVC.Application.ViewModels.Customer;
 
 namespace MyRentalShopMVC.Application
 {
@@ -20,6 +22,7 @@ namespace MyRentalShopMVC.Application
         {
             services.AddTransient<ICustomerService, CustomerService>();
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            services.AddTransient<IValidator<NewCustomerVm>, NewCustomerValidation>();
             return services;
         }
     }
