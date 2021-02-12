@@ -9,6 +9,7 @@ namespace MyRentalShopMVC.Application.ViewModels.Customer
 {
     public class NewCustomerVm : IMapFrom<MyRentalShopMVC.Domain.Model.Customer>
     {
+        
         public int Id { get; set; }
 
         /// <summary>
