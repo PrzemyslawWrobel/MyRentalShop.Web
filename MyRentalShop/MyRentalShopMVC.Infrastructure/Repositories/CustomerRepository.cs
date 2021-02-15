@@ -31,9 +31,9 @@ namespace MyRentalShopMVC.Infrastructure.Repositories
          /// Usunięcie klienta z bazy klientów
          /// </summary>
          /// <param name="customerId"></param>
-        public void DeleteCustomer(int customerId)
+        public void DeleteCustomer(int Id)
         {
-            var customerForDelete = _context.Customers.Find(customerId);
+            var customerForDelete = _context.Customers.Find(Id);
             if (customerForDelete != null)
             {
                 _context.Customers.Remove(customerForDelete);
@@ -73,7 +73,10 @@ namespace MyRentalShopMVC.Infrastructure.Repositories
             return customer;
         }
 
-        //TODO Metoda UpdateCustomer do implementacji
+      /// <summary>
+      /// Metoda do aktualizacji danych uzytkownika
+      /// </summary>
+      /// <param name="customer"></param>
         public void UpdateCustomer(Customer customer)
         {
             _context.Attach(customer);
