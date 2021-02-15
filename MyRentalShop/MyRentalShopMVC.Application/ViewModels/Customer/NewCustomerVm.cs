@@ -33,12 +33,12 @@ namespace MyRentalShopMVC.Application.ViewModels.Customer
         public bool IsActiv { get; set; }
 
         /// <summary>
-        /// Mapuje z wartości wpisane w formularzu do model w backendzie
+        /// Mapuje z wartości wpisane w formularzu do model w backendzie. .ReversMap() - tworzy mapę odwrotną od Customer na NewCustomerVm
         /// </summary>
         /// <param name="profile"></param>
         public void Mapping(Profile profile)
         {
-           profile.CreateMap<NewCustomerVm, MyRentalShopMVC.Domain.Model.Customer>();
+           profile.CreateMap<NewCustomerVm, MyRentalShopMVC.Domain.Model.Customer>().ReverseMap();
         }
     }
 
