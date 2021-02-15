@@ -13,7 +13,7 @@ namespace MyRentalShopMVC.Domain.Interfaces
         IQueryable<Customer> GetAllCustomers();
         IQueryable<Customer> GetAllActiveCustomers(bool isActiv);
         void DeleteCustomer(int customerId);
-        Customer UpdateCustomer(Customer customer);
+        void UpdateCustomer(Customer customer);
 
         int AddCustomerContactInf(CustomerContactInformation customerContactInformation);
         void DeleteCustomerContactInf(int customerContactInformationId);

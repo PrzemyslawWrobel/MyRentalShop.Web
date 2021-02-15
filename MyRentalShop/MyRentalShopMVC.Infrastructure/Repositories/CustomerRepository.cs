@@ -74,9 +74,14 @@ namespace MyRentalShopMVC.Infrastructure.Repositories
         }
 
         //TODO Metoda UpdateCustomer do implementacji
-        public Customer UpdateCustomer(int customerId)
+        public void UpdateCustomer(Customer customer)
         {
-            throw new NotImplementedException();
+            _context.Attach(customer);
+            _context.Entry(customer).Property("Name").IsModified = true;
+            _context.Entry(customer).Property("NIP").IsModified = true;
+            _context.Entry(customer).Property("REGON").IsModified = true;
+            _context.Entry(customer).Property("IsActiv").IsModified = true;
+            _context.SaveChanges();
         }
 
         /// <summary>
