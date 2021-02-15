@@ -110,5 +110,12 @@ namespace MyRentalShopMVC.Application.Services
             var customer = _mapper.Map<Customer>(model);
             _customerRepository.UpdateCustomer(customer);
         }
+
+
+        public void DeleteCustomer(int id)
+        {
+            _customerRepository.DeleteCustomer(id);
+        }
+
     }
 }

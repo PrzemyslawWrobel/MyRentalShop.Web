@@ -87,7 +87,11 @@ namespace MyRentalShop.Web.Controllers
             return RedirectToAction("Index"); //View();
         }
 
-
+        public IActionResult Delete(int id)
+        {
+            _customerService.DeleteCustomer(id);
+            return RedirectToAction("Index");
+        }
 
     }
 }
