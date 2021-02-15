@@ -97,5 +97,12 @@ namespace MyRentalShopMVC.Application.Services
 
             return customerVm;
         }
+
+        public NewCustomerVm GetCustomerForEdit(int id)
+        {
+            var customer = _customerRepository.GetCustomerById(id);
+            var customerVm = _mapper.Map<NewCustomerVm>(customer);
+            return customerVm;
+        }
     }
 }
