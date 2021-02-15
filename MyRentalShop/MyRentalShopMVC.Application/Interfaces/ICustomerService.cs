@@ -14,5 +14,6 @@ namespace MyRentalShopMVC.Application.Interfaces
         //TODO Zmienić NewCustomerVm na pełny model do edycji
         NewCustomerVm GetCustomerForEdit(int id);
         void UpdateCustomer(NewCustomerVm model);
+        void DeleteCustomer(int id);
     }
 }
