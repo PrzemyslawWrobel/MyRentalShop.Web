@@ -72,5 +72,22 @@ namespace MyRentalShop.Web.Controllers
             var customerModel = _customerService.GetCustomerDetails(Id);
             return View(customerModel);
         }
+
+        [HttpGet]
+        public IActionResult EditCustomer(int id)
+        {
+            var customer = _customerService.GetCustomerForEdit(id);
+            return View(customer);
+        }
+
+        [HttpPost]
+        public IActionResult EditCustomer(NewCustomerVm model)
+        {
+            var id = _customerService.AddCustomer(model);
+            return RedirectToAction("Index"); //View();
+        }
+
+
+
     }
 }
