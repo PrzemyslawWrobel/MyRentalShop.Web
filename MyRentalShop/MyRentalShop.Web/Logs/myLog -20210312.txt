@@ -1,0 +1,5 @@
+2021-03-12T10:56:32.0650960+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-12T10:56:32.1015475+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-12T10:56:32.1083166+01:00  [INF] Content root path: "C:\Z_Moje Dane\Prywatne\Kurs_.Net\wypożyczalnia\MyRentalShop.Web\MyRentalShop\MyRentalShop.Web" (b5d60022)
+2021-03-12T11:01:35.2125304+01:00 80000008-0001-f900-b63f-84710c7967bb [INF] User created a new account with password. (693a7015)
+2021-03-12T11:02:10.5460353+01:00 80000008-0000-f600-b63f-84710c7967bb [INF] User logged in. (fdce0db4)
