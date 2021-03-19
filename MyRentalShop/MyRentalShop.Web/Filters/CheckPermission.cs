@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.Filters;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,10 @@ namespace MyRentalShop.Web.Filters
         public void OnAuthorization(AuthorizationFilterContext context)
         {
             bool IsAuthorized = CheckUserPermission(context.HttpContext.User, _permission);
+            if(!IsAuthorized)
+            {
+                context.Result = new UnauthorizedResult();
+            }
         }
 
         private bool CheckUserPermission(ClaimsPrincipal user, string permission)
