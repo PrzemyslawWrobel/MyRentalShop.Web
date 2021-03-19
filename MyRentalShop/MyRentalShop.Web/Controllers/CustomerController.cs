@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyRentalShop.Web.Filters;
 using MyRentalShopMVC.Application.Interfaces;
 using MyRentalShopMVC.Application.ViewModels.Customer;
 using System;
@@ -28,6 +29,7 @@ namespace MyRentalShop.Web.Controllers
             return View(model);
         }
 
+        [CheckPermission("Read")]
         [HttpPost]
         public IActionResult Index(int pageSize, int? pageNo, string searchString)
         {
