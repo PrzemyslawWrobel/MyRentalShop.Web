@@ -8,9 +8,14 @@ namespace MyRentalShop.Web.Filters
 {
     public class CheckPermission : Attribute, IAuthorizationFilter
     {
+        private readonly string _permission;
+        public CheckPermission(string permission)
+        {
+            _permission = permission;
+        }
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            throw new NotImplementedException();
+            bool IsAuthorized = CheckUserPermission(context.HttpContext.User, _permission);
         }
     }
 }
