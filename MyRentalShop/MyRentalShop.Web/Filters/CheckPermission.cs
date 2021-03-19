@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace MyRentalShop.Web.Filters
@@ -16,6 +17,15 @@ namespace MyRentalShop.Web.Filters
         public void OnAuthorization(AuthorizationFilterContext context)
         {
             bool IsAuthorized = CheckUserPermission(context.HttpContext.User, _permission);
+        }
+
+        private bool CheckUserPermission(ClaimsPrincipal user, string permission)
+        {
+            // Połącz z bazą danych
+            //Pobrać użytkownika 
+            //Sprawdzić czy ma odp uprawnienia do danej akcji w kontrolerze
+
+            return permission == "Read";
         }
     }
 }
